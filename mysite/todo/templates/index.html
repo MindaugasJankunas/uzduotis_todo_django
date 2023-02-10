@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+ <div class="row">
+    <div class="col-sm-4">
+        <h3>Lengva sukurti naują!</h3>
+        <p>Sukurk užduotį vos per kelias akimirkas!</p>
+        <a class="btn btn-primary btn-sm mt-1 mb-1" href="{% url 'user_task_new' %}">Sukurti!</a>
+    </div>
+    <div class="col-sm-4">
+        <h3>Peržiūrėk sukurtas užduotis!</h3>
+        <p>Nepalik suplanuotų darbų - visada matyk ką turi padaryti!</p>
+        <a class="btn btn-primary btn-sm mt-1 mb-1" href="{% url 'user_task_list' %}">Peržiūrėti!</a>
+    </div>
+    <div class="col-sm-4">
+        <h3>Redaguok esant reikalui!</h3>
+        <p>Keisk, trink, papildyk. Tavo užduotis, tavo taisyklės!</p>
+        <p><<----   Keliauk į savo užduotis ir koreguok į valias! </p>
+    </div>
+  </div>
+{% endblock %}

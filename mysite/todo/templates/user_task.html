@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>{{ task.title }}</h2>
+<hr>
+<p>{{ task.description }}</p>
+<hr>
+<ul>
+  <li>Sukūrimo data: {{ task.date }}</li>
+  <li>Atlikimo terminas: {{ task.due }}</li>
+  <li>Statusas: {{ task.get_status_display }}</li>
+</ul>
+<div>
+  <a class="btn btn-secondary btn-sm mt-1 mb-1" href="{% url 'user_task_update' task.id %}">Redaguoti</a>
+  <a class="btn btn-danger btn-sm mt-1 mb-1" href="{% url 'user_task_delete' task.id %}">Ištrinti</a>
+</div>
+{% endblock %}
